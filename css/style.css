@@ -1,0 +1,340 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light-blue-100: #f3f5fc;
+    --light-blue-200: #eff1fa;
+    --light-blue-300: #e9ecf8;
+    --light-blue-400: #aab2d5;
+    --light-blue-500: #757fb2;
+    --dark-blue-100: #609ed4;
+    --dark-blue-200: #356ea9;
+    --dark-blue-300: #0a3871;
+    --dark-blue-400: #072b61;
+    --dark-blue-500: #052051;
+    --gray-100: #ced4da;
+    --gray-200: #adb5bd;
+    --gray-300: #868e96;
+    --gray-400: #495057;
+    --gray-500: #343a40;
+  }
+  
+  * {
+    background: var(--light-blue-100);
+    font-family: "Inter";
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    line-height: 150%;
+    color: #333;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+  script {
+    display: none;
+  }
+  
+  body {
+    height: 100%;
+  }
+  
+  head {
+    display: none;
+  }
+  
+  header {
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 3em;
+    user-select: none;
+  }
+  
+  main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 50px;
+    width: 100%;
+    gap: clamp(25px, 5vw, 4.6rem);
+  }
+  
+  .main-left,
+  .main-right {
+    display: inline-block;
+    margin: 0 auto;
+    width: 85vw;
+    top: 20px;
+    padding: 40px 25px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    word-break: break-word;
+  }
+  
+  .main-right {
+    padding-right: 20px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 32px;
+  }
+  
+  .textarea,
+  .texto-encriptado {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 0.7rem;
+    color: var(--dark-blue-300);
+    height: 40vh;
+  }
+  ::placeholder {
+    color: var(--light-blue-400);
+  }
+  
+  .textarea {
+    height: 80%;
+  }
+  
+  .texto-encriptado {
+    height: 80%;
+  }
+  
+  span {
+    position: absolute;
+    z-index: 5000;
+    scale: 0.8;
+    right: 20px;
+    top: 20px;
+  }
+  
+  span svg {
+    stroke: var(--light-blue-400);
+  }
+  
+  .icono {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    font-size: 0.75em;
+    gap: 5px;
+    padding: 20px 0;
+    user-select: none;
+  }
+  
+  .icono svg {
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    stroke: var(--gray-400);
+  }
+  
+  .icono p {
+    color: var(--gray-400);
+    font-size: 0.6em;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .botones-group {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    max-height: 67px;
+    width: 280px;
+    padding: 12px 0 12px;
+    margin: 5px 0 5px;
+    align-items: center;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.7em;
+    box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--dark-blue-300);
+  }
+  
+  .main-right .botones-group {
+    background: var(--white);
+  }
+  
+  .main-right img {
+    width: 100%;
+    background: var(--white);
+  }
+  
+  .ocultar {
+    display: none;
+  }
+  
+  .main-right h3 {
+    background: var(--white);
+    font-size: 0.8em;
+  }
+  
+  .main-right p {
+    font-size: 0.6em;
+    background: var(--white);
+  }
+  
+  .texto-encriptado {
+    background: var(--white);
+    border: none;
+    outline: none;
+    resize: none;
+    color: var(--dark-blue-300);
+  }
+  
+  .encriptar {
+    background-color: var(--dark-blue-300);
+    color: white;
+  }
+  
+  .encriptar:hover {
+    background-color: var(--dark-blue-400);
+  }
+  
+  .desencriptar {
+    background: #d8dfe8;
+    color: var(--dark-blue-300);
+  }
+  
+  .desencriptar:hover {
+    background-color: white;
+  }
+  
+  .copiar {
+    color: var(--dark-blue-300);
+    background-color: white;
+    display: inline-block;
+    display: none;
+  }
+  
+  .copiar:hover {
+    background-color: var(--light-blue-100);
+  }
+  
+  .Footer-hiden {
+    display: none;
+    background-color: transparent;
+  }
+  
+  @media (min-width: 450px) {
+    .btn {
+      width: 370px;
+    }
+    .Footer-hiden {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 750px) {
+    .botones-group {
+      flex-direction: row;
+      gap: 15px;
+    }
+    .btn {
+      width: 350px;
+      height: 67px;
+      padding-top: 20px;
+    }
+  }
+  
+  @media (min-width: 850px) {
+    main {
+      flex-direction: row;
+      width: 85%;
+      height: 100%;
+    }
+    .main-left,
+    .main-right {
+      height: 85vh;
+    }
+    .main-left {
+      width: 60%;
+    }
+    .main-right {
+      width: 35%;
+    }
+    .sin-texto {
+      text-align: center;
+    }
+    .sin-texto p {
+      font-size: 0.5em;
+    }
+    .ocultar {
+      display: block;
+    }
+    .botones-group {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .muñeco {
+      padding-top: 80px;
+    }
+    .copiar {
+      width: 20vw;
+      padding-bottom: 20px;
+    }
+    .copiar,
+    .texto-encriptado {
+      display: none;
+    }
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    margin: -18px auto 0;
+    background-color: transparent;
+  }
+  
+  .footer-center {
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  
+  .footer-center p {
+    gap: 2px;
+    color: var(--gray-400);
+    font-size: .4rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+  }
+  
+  .footer-center p a {
+    font-size: .45rem;
+    margin-top: -2px;
+  }
+  
+  .footer-icons {
+    margin-left: 10px;
+    flex-direction: row;
+  }
+  
+  .footer-icons a {
+    font-size: 5px;
+    margin-right: 5px;
+  }
